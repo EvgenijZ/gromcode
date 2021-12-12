@@ -1,7 +1,8 @@
 a[target='_blank'] {
   color: green;
 }
-li {
+ol,
+ul {
   background-color: yellow;
 }
 header,
