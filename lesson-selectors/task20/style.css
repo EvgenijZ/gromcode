@@ -1,0 +1,35 @@
+.figure {
+  margin: 50px;
+}
+
+.figure:nth-child(1) {
+  width: 100px;
+  height: 50px;
+  background-color: forestgreen;
+  border-radius: 16px;
+}
+
+.figure:nth-child(2) {
+  width: 100px;
+  height: 50px;
+  background-color: darkmagenta;
+  border-radius: 50%;
+}
+
+.figure:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+
+.figure:nth-child(4) {
+  width: 100px;
+  height: 50px;
+  /* background-color: brown; */
+  border: 50px solid brown;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  box-sizing: border-box;
+}
