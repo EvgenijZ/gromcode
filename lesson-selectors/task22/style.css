@@ -1,0 +1,21 @@
+div {
+  border: 2px solid black;
+  padding: 50px;
+}
+
+.parent {
+  margin: 50px;
+  background-color: blue;
+}
+
+div > div {
+  background-color: yellow;
+}
+
+div > div > div {
+  background: green;
+}
+
+div > div > div > div {
+  background: burlywood;
+}
