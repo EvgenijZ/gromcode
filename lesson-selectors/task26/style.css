@@ -20,8 +20,12 @@
 .nav-list .nav-item {
   display: inline-block;
   color: #fff;
-  margin-left: 16px;
+  margin-left: 10px;
   list-style-type: none;
+}
+
+.nav-list .nav-item:first-child {
+  margin-left: 16px;
 }
 
 .content {
