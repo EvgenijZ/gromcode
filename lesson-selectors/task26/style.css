@@ -18,9 +18,9 @@
 }
 
 .nav-list .nav-item {
-  display: inline-block;
+  float: left;
   color: #fff;
-  margin-left: 9.5px;
+  margin-right: 16px;
   list-style-type: none;
 }
 
