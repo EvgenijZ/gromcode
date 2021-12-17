@@ -8,7 +8,7 @@ section {
 }
 
 section h1 {
-  letter-spacing: 20px;
+  word-spacing: 20px;
   text-transform: uppercase;
   text-align: center;
 }
