@@ -6,7 +6,6 @@ form {
   margin: 32px;
 }
 
-.input {
+.input-wrap {
   margin: 8px;
-  display: block;
 }
