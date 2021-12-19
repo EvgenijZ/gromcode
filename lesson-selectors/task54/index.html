@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form>
+      <div class="input-wrap">
+        <label for="">Last Name</label>
+        <input type="text" name="lastName" id="" value="Emerson" readonly />
+      </div>
+      <div class="input-wrap">
+        <label for="">Age</label>
+        <input
+          type="number"
+          name="age"
+          id=""
+          value="17"
+          min="3"
+          max="10"
+          required
+        />
+      </div>
+      <div class="input-wrap">
+        <input type="checkbox" name="agree" id="agree" disabled />
+        <label for="agree">Accept terms and conditions</label>
+      </div>
+      <div class="input-wrap">
+        <div class="choose-gender">
+          <input type="radio" name="z" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="z" id="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="z" id="secret" checked />
+          <label for="secret">Secret</label>
+        </div>
+      </div>
+      <div class="input-wrap">
+        <textarea
+          name="description"
+          id=""
+          placeholder="Write description..."
+          maxlength="10"
+        ></textarea>
+      </div>
+      <div class="input-wrap">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
