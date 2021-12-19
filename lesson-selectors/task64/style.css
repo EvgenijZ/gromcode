@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
 .container {
   margin: 32px;
 }
@@ -22,7 +19,7 @@ body {
 .rect:hover {
   width: 100%;
   opacity: 1;
-  transition: width, opacity, 2s, 1s;
+  transition: width 2s, opacity 0.5s;
 }
 
 .linear:hover {
