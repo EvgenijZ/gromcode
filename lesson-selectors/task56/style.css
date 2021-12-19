@@ -33,6 +33,7 @@ body {
 
 .form-label {
   margin-bottom: 4px;
+  display: block;
 }
 
 .form-input {
@@ -56,5 +57,4 @@ body {
   text-transform: uppercase;
   color: #fff;
   border-radius: 4px;
-  border: none;
 }
