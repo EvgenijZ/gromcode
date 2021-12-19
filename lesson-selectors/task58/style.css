@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  overflow-x: auto;
+}
+
+table {
+  margin: 16px;
+  border: 1px solid black;
+  width: 500px;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 4px;
+}
