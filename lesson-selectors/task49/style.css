@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.image-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.image-container img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.gallery {
+  display: flex;
+}
+
+.card figcaption {
+  line-height: 30px;
+  text-align: center;
+}
+
+.card {
+  margin: 16px;
+  box-shadow: 0px 7px 18px -8px rgba(0, 0, 0, 0.75);
+}
+
+.card:nth-child(1) img {
+  filter: opacity(50%);
+}
+
+.card:nth-child(2) img {
+  filter: blur(4px);
+}
+
+.card:nth-child(3) img {
+  filter: invert(100%);
+}
