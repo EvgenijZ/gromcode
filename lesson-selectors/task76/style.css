@@ -34,7 +34,7 @@
   border-radius: 4px;
 }
 
-@media screen and (min-width: 600px) and (max-width: 889px) {
+@media screen and (min-width: 600px) and (max-width: 899px) {
   .wrap {
     display: flex;
   }
@@ -45,7 +45,7 @@
 
   .navigation,
   .product-list {
-    flex-grow: 1;
+    flex: 1;
   }
 }
 
