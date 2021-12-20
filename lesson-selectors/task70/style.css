@@ -38,13 +38,13 @@
   margin: 0 auto;
   margin-bottom: 8px;
   border-radius: 50%;
-  animation: spin 2s infinite linear;
+  animation: spin 2s linear;
 }
 
 @keyframes spin {
-  0% {
+  /* 0% {
     transform: rotate(0);
-  }
+  } */
   100% {
     transform: rotate(360deg);
   }
