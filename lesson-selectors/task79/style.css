@@ -94,6 +94,7 @@ header {
 
 .wrap {
   display: flex;
+  width: 80%;
 }
 
 @media screen and (max-width: 599px) {
@@ -102,6 +103,7 @@ header {
   }
   .wrap {
     flex-direction: column;
+    width: 100%;
   }
   .section,
   .navigation,
@@ -113,6 +115,9 @@ header {
 @media screen and (min-width: 600px) and (max-width: 1199px) {
   .main {
     flex-direction: column;
+  }
+  .wrap {
+    width: 100%;
   }
   .news {
     width: 100%;
