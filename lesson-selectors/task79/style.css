@@ -125,4 +125,10 @@ header {
   .news {
     width: 100%;
   }
+  .navigation {
+    flex-basis: 20%;
+  }
+  .section {
+    flex-basis: 80%;
+  }
 }
