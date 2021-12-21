@@ -17,7 +17,8 @@
       cursor: pointer;
       background-color: #ff7f50; }
       .header .nav-list__item_selected {
-        background-color: #fb0;
+        background-color: #fb0; }
+      .header .nav-list__item:hover {
         opacity: 0.7; }
 
 * {
