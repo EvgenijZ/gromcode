@@ -1,0 +1,11 @@
+@mixin width600_899 {
+  @media screen and (min-width: 600px) and (max-width: 899px) {
+    @content;
+  }
+}
+
+@mixin width900 {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
