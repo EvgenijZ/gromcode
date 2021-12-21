@@ -1,0 +1,23 @@
+@mixin portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin w599 {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin w600_899 {
+  @media screen and (min-width: 600px) and (max-width: 889px) {
+    @content;
+  }
+}
+
+@mixin w900_1199 {
+  @media screen and (min-width: 900px) and (max-width: 1199px) {
+    @content;
+  }
+}

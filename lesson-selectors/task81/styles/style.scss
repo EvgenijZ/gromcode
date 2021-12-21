@@ -1,0 +1,32 @@
+@import 'header.scss';
+@import 'breakpoints.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  @include portrait {
+    flex-direction: column;
+  }
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  background-color: #c47;
+  @include w599 {
+    background-color: #ff7f50;
+  }
+  @include w600_899 {
+    background-color: #8a2be2;
+  }
+  @include w900_1199 {
+    background-color: #a61;
+  }
+}
