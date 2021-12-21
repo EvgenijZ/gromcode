@@ -37,13 +37,16 @@ header {
   padding: 0.5em;
 }
 
-.navigation,
+.navigation {
+  flex-basis: 25%;
+}
+
 .news {
-  width: 20%;
+  flex-basis: 20%;
 }
 
 .section {
-  width: 80%;
+  flex-basis: 75%;
   font-size: 1.25em;
 }
 .units-list {
@@ -94,7 +97,7 @@ header {
 
 .wrap {
   display: flex;
-  width: 80%;
+  flex-basis: 80%;
 }
 
 @media screen and (max-width: 599px) {
