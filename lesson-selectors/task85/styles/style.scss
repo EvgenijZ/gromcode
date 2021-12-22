@@ -1,0 +1,109 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $body-bg-color;
+  font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+.cards {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .price-card {
+    background-color: $card-bg-color;
+    margin: 9px;
+    flex-basis: 380px;
+    flex-shrink: 0;
+    color: $text-color;
+    position: relative;
+    overflow: hidden;
+    &:first-child {
+      @include card-color($basic-card-color);
+    }
+    &:nth-child(2) {
+      @include card-color($business-card-color);
+    }
+    &:nth-child(3) {
+      @include card-color($webshop-card-color);
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 43px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 33px 0;
+      span {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+    &__popular-badge {
+      position: absolute;
+      right: -30px;
+      top: 30px;
+      background-color: $popular-badge-color;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      transform: rotate(45deg);
+      text-transform: uppercase;
+      width: 150px;
+      line-height: 25px;
+      text-align: center;
+    }
+    &__price {
+      padding: 20px 0;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 67px;
+      text-align: center;
+    }
+    &__description {
+      padding: 40px 26px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+    }
+    &__option-list {
+      line-height: 50px;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      list-style-type: none;
+      &__item {
+        padding-left: 22px;
+        padding-right: 22px;
+        display: flex;
+        align-items: center;
+        &:nth-child(odd) {
+          background-color: $option-list-odd-color;
+        }
+        svg {
+          margin-right: 20px;
+        }
+      }
+    }
+    &__order-btn {
+      display: flex;
+      cursor: pointer;
+      margin: 40px auto;
+      padding: 12px 26px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      border: none;
+      color: $text-color;
+    }
+  }
+}

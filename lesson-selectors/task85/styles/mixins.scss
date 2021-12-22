@@ -1,0 +1,9 @@
+@mixin card-color($color) {
+  .price-card__price,
+  .price-card__order-btn {
+    background-color: $color;
+  }
+  .price-card__option-list__item svg path {
+    fill: $color;
+  }
+}
