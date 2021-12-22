@@ -21,18 +21,12 @@ html {
     .cards .price-card:first-child .price-card__price,
     .cards .price-card:first-child .price-card__order-btn {
       background-color: #5bb189; }
-    .cards .price-card:first-child .price-card__option-list__item svg path {
-      fill: #5bb189; }
     .cards .price-card:nth-child(2) .price-card__price,
     .cards .price-card:nth-child(2) .price-card__order-btn {
       background-color: #3a6ba5; }
-    .cards .price-card:nth-child(2) .price-card__option-list__item svg path {
-      fill: #3a6ba5; }
     .cards .price-card:nth-child(3) .price-card__price,
     .cards .price-card:nth-child(3) .price-card__order-btn {
       background-color: #ec632a; }
-    .cards .price-card:nth-child(3) .price-card__option-list__item svg path {
-      fill: #ec632a; }
     .cards .price-card__title {
       font-size: 35px;
       line-height: 43px;
@@ -85,7 +79,9 @@ html {
         align-items: center; }
         .cards .price-card__option-list__item:nth-child(odd) {
           background-color: rgba(42, 52, 56, 0.5); }
-        .cards .price-card__option-list__item svg {
+        .cards .price-card__option-list__item-icon {
+          width: 16px;
+          height: 13px;
           margin-right: 20px; }
     .cards .price-card__order-btn {
       display: flex;
