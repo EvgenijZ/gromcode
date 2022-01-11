@@ -96,6 +96,6 @@ html {
       color: #fff;
       font-size: 14px;
       line-height: 17px;
-      width: 154px; }
+      min-width: 154px; }
 
 /*# sourceMappingURL=style.css.map */
