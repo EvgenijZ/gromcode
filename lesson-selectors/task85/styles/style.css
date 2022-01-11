@@ -34,7 +34,8 @@ html {
       display: flex;
       flex-direction: column;
       text-align: center;
-      margin: 33px 0; }
+      margin: 33px 0;
+      height: 64px; }
       .cards .price-card__title span {
         font-size: 20px;
         line-height: 24px;
@@ -46,10 +47,9 @@ html {
       background-color: #dc3f45;
       font-weight: bold;
       font-size: 14px;
-      line-height: 17px;
       transform: rotate(45deg);
       text-transform: uppercase;
-      width: 150px;
+      width: 147px;
       line-height: 25px;
       text-align: center; }
     .cards .price-card__price {
@@ -73,7 +73,6 @@ html {
       font-size: 15px;
       list-style-type: none; }
       .cards .price-card__option-list__item {
-        padding-left: 22px;
         padding-right: 22px;
         display: flex;
         align-items: center; }
@@ -82,7 +81,10 @@ html {
         .cards .price-card__option-list__item-icon {
           width: 16px;
           height: 13px;
-          margin-right: 21px; }
+          margin-right: 22px;
+          margin-top: 19px;
+          margin-bottom: 18px;
+          margin-left: 22px; }
     .cards .price-card__order-btn {
       display: flex;
       cursor: pointer;
@@ -93,6 +95,7 @@ html {
       border: none;
       color: #fff;
       font-size: 14px;
-      line-height: 17px; }
+      line-height: 17px;
+      width: 154px; }
 
 /*# sourceMappingURL=style.css.map */
