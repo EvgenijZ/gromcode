@@ -1,0 +1,94 @@
+.team-inbox {
+  background-color: $color_light_orange;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px 48px 15px;
+  @include min_width1400 {
+    align-items: center;
+    padding: 0;
+  }
+  .wrap {
+    flex-direction: column;
+    @include min_width1400 {
+      flex-direction: row;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    &:first-child {
+      @include min_width1400 {
+        margin-right: auto;
+      }
+    }
+    &:last-child {
+      @include min_width1400 {
+        max-width: 519px;
+        margin-right: -31px;
+        margin-top: 115px;
+      }
+    }
+  }
+  &__block {
+    @include min_width1400 {
+      margin-left: 30px;
+    }
+    &-subtitle {
+      color: $color_orange;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 34px;
+      margin: 32px 0 0 0;
+      @include min_width1400 {
+        margin: 0;
+      }
+    }
+    &-title {
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -0.357143px;
+      color: $color_black;
+      margin: 17px 0 0 0;
+      @include min_width1400 {
+        font-size: 56px;
+        line-height: 56px;
+        margin: 24px 0 0 0;
+        letter-spacing: -0.5px;
+      }
+    }
+    &-description {
+      font-size: 24px;
+      line-height: 34px;
+      color: $color_black;
+      margin: 18px 0 0 0;
+      min-height: 205px;
+      @include min_width1400 {
+        min-height: 102px;
+        margin: 30px 0 0 0;
+        max-width: 461px;
+      }
+    }
+  }
+  &__picture {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    @include min_width1400 {
+      margin-left: 63px;
+      margin-top: 142px;
+      margin-bottom: 101px;
+    }
+    &-img {
+      max-width: 100%;
+    }
+    &-figcaption {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 15px;
+      color: $color_light_black;
+    }
+  }
+}

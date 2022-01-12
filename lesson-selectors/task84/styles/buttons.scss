@@ -1,0 +1,77 @@
+.button {
+  text-decoration: none;
+  text-align: center;
+  &__hamburger {
+    background-color: #fff;
+    border: none;
+    border-left: 1px solid #00000026;
+    padding: 25px 20px;
+    &-icon {
+      width: 18px;
+      height: 13px;
+    }
+  }
+  &__blue {
+    padding: 0 28px 0 28px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 48px;
+    color: #ffffff;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 1e-5) 100%
+      ),
+      $color_blue_alt;
+    border-radius: 2px;
+    border: none;
+    display: inline-block;
+
+    background-blend-mode: overlay, normal;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05),
+      inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+
+    @include min_width1400 {
+      min-width: 160px;
+      box-shadow: none;
+      background-blend-mode: initial;
+    }
+  }
+  &__white {
+    padding: 0 29px 0 28px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 48px;
+    color: $color_blue_alt;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 1e-5) 100%
+      ),
+      #ffffff;
+    border-radius: 2px;
+    border: none;
+    display: inline-block;
+    background-blend-mode: overlay, normal;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05),
+      inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    @include min_width1400 {
+      min-width: 158px;
+      box-shadow: none;
+      background-blend-mode: initial;
+    }
+    &.text-black {
+      @include max_width320 {
+        color: #000;
+      }
+    }
+  }
+}
+
+.button.mob-w100 {
+  @include max_width320 {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}

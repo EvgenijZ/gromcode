@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.hide-mobile {
+  @include max_width320 {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include min_width1400 {
+    display: none;
+  }
+}
+
+.w-100 {
+  width: $w_100;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@include min_width1400 {
+  .wrap {
+    max-width: 1140px;
+  }
+}

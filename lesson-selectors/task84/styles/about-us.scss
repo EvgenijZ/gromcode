@@ -1,0 +1,51 @@
+.about__us {
+  display: flex;
+  flex-direction: column;
+  background-color: $color_grey;
+  padding: 26px 15px 46px 15px;
+  @include min_width1400 {
+    padding: 77px 0 76px 0;
+    margin: 0 0 30px 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .wrap {
+    flex-direction: column;
+    @include min_width1400 {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  &-column {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 32px;
+    color: $color_black;
+    @include max_width320 {
+      &:first-child {
+        min-height: 180px;
+      }
+    }
+    @include min_width1400 {
+      max-width: 555px;
+      height: 102px;
+      margin-top: 0;
+    }
+  }
+  &-title {
+    margin: 0;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+    color: $color_black;
+  }
+  &-description {
+    margin: 8px 0 0 0;
+    @include min_width1400 {
+      font-size: 22px;
+      line-height: 32px;
+      color: $color_black;
+    }
+  }
+}

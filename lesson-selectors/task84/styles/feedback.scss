@@ -1,0 +1,100 @@
+.feedback {
+  border-bottom: 1px solid $color_alt_grey;
+  padding: 39px 15px 50px 15px;
+  @include min_width1400 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 66px 0;
+    margin-top: 56px;
+  }
+  .wrap {
+    flex-direction: column;
+    @include min_width1400 {
+      text-align: center;
+    }
+  }
+  &__slider {
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color_dark_blue;
+      margin: 0;
+    }
+    &-reviews {
+      &-item {
+        &-text {
+          margin: 29px 0 0 0;
+          font-size: 24px;
+          line-height: 34px;
+          color: $color_black;
+          min-height: 307px;
+          @include min_width1400 {
+            max-width: 750px;
+            margin: 28px auto 0 auto;
+            min-height: 102px;
+          }
+        }
+        &-bio {
+          &-name {
+            margin: 32px 0 0 0;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_black;
+            @include min_width1400 {
+              margin: 34px 0 0 0;
+            }
+          }
+          &-position {
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_light_black;
+          }
+        }
+      }
+    }
+    &-navigation {
+      margin: 40px 0 0 0;
+      display: flex;
+      justify-content: center;
+      @include min_width1400 {
+        margin: 38px 0 0 0;
+      }
+      &-item {
+        width: 12px;
+        height: 12px;
+        background-color: #2b292d33;
+        border-radius: 50%;
+        @include min_width1400 {
+          height: 8px;
+          width: 8px;
+        }
+        &:not(:first-child) {
+          margin-left: 19.5px;
+          @include min_width1400 {
+            margin-left: 13px;
+          }
+        }
+        &.active {
+          background: #3142c5;
+        }
+      }
+    }
+  }
+  &__bg {
+    text-align: center;
+    margin-top: 40px;
+    @include min_width1400 {
+      margin: 0;
+      position: absolute;
+      right: 26px;
+      bottom: 0;
+    }
+    &-img {
+      max-width: 100%;
+      display: flex;
+    }
+  }
+}
