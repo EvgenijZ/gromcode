@@ -6,6 +6,14 @@ html {
   font-family: 'Work Sans', sans-serif;
 }
 
+body {
+  @include min_width1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
 .hide-mobile {
   @include max_width320 {
     display: none;
@@ -36,4 +44,9 @@ html {
   .wrap {
     max-width: 1140px;
   }
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
 }
