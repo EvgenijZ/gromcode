@@ -175,29 +175,29 @@ html {
   .header .button__hamburger {
     margin-left: auto; }
 
-.hero {
+.headline {
   background-color: #f3c6bd;
   padding: 99px 0 36px 0; }
   @media screen and (min-width: 1400px) {
-    .hero {
+    .headline {
       padding: 177px 0 126px 0;
       display: flex;
       justify-content: center; } }
-  .hero .wrap {
+  .headline .wrap {
     position: relative;
     flex-direction: column; }
     @media screen and (min-width: 1400px) {
-      .hero .wrap {
+      .headline .wrap {
         margin-left: -7px; } }
-  .hero__column-left {
+  .headline__column-left {
     padding: 0 15px; }
     @media screen and (min-width: 1400px) {
-      .hero__column-left {
+      .headline__column-left {
         position: relative;
         z-index: 1;
         margin-right: auto;
         padding: 0; } }
-  .hero__title {
+  .headline__title {
     margin: 0;
     font-weight: bold;
     font-size: 50px;
@@ -206,14 +206,14 @@ html {
     color: #2b292d;
     min-height: 205px; }
     @media screen and (min-width: 1400px) {
-      .hero__title {
+      .headline__title {
         font-size: 80px;
         line-height: 78px;
         letter-spacing: -0.5px;
         min-height: 165px;
         max-width: 754px;
         margin-left: 0; } }
-  .hero__description {
+  .headline__description {
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
@@ -221,34 +221,34 @@ html {
     margin: 24px 0 0 0;
     min-height: 172px; }
     @media screen and (min-width: 1400px) {
-      .hero__description {
+      .headline__description {
         margin-top: 34px;
         min-height: 102px;
         max-width: 456px;
         margin-left: 3px; } }
-  .hero__actions {
+  .headline__actions {
     display: flex;
     flex-direction: column;
     margin-top: 15px; }
     @media screen and (min-width: 1400px) {
-      .hero__actions {
+      .headline__actions {
         margin-top: 58px;
         flex-direction: row;
         margin-left: 3px; } }
-    .hero__actions .button {
+    .headline__actions .button {
       margin-top: 15px; }
       @media screen and (min-width: 1400px) {
-        .hero__actions .button {
+        .headline__actions .button {
           margin-top: 0; }
-          .hero__actions .button:not(:last-child) {
+          .headline__actions .button:not(:last-child) {
             margin-right: 10px; } }
-  .hero__background {
+  .headline__background {
     margin-top: 33px;
     display: block;
     max-width: 320px;
     max-height: 180px; }
     @media screen and (min-width: 1400px) {
-      .hero__background {
+      .headline__background {
         position: absolute;
         z-index: 0;
         top: 8px;
@@ -697,25 +697,25 @@ html {
         color: #2b292d99;
         margin: 0; }
 
-.audiences {
+.audience {
   background-color: rgba(0, 161, 198, 0.07);
   padding: 50px 15px; }
   @media screen and (min-width: 1400px) {
-    .audiences {
+    .audience {
       display: flex;
       justify-content: center;
       padding: 108px 0 110px 0;
       margin-bottom: 43px; } }
-  .audiences .wrap {
+  .audience .wrap {
     flex-direction: column; }
-  .audiences__subtitle {
+  .audience__subtitle {
     font-weight: bold;
     font-size: 22px;
     line-height: 34px;
     text-align: center;
     color: #2b292d;
     margin: 0; }
-  .audiences__title {
+  .audience__title {
     font-weight: bold;
     font-size: 40px;
     line-height: 40px;
@@ -724,13 +724,13 @@ html {
     color: #2b292d;
     margin: 17px 0 0 0; }
     @media screen and (min-width: 1400px) {
-      .audiences__title {
+      .audience__title {
         max-width: 555px;
         margin: 24px auto 0 auto;
         font-size: 56px;
         line-height: 56px;
         letter-spacing: -0.5px; } }
-  .audiences__description {
+  .audience__description {
     font-size: 24px;
     line-height: 34px;
     text-align: center;
@@ -738,64 +738,64 @@ html {
     margin-bottom: 0;
     margin-top: 18px; }
     @media screen and (min-width: 1400px) {
-      .audiences__description {
+      .audience__description {
         max-width: 555px;
         margin: 30px auto 0 auto;
         min-height: 72px; } }
-  .audiences__actions {
+  .audience__actions {
     margin-top: 30px; }
     @media screen and (min-width: 1400px) {
-      .audiences__actions {
+      .audience__actions {
         text-align: center;
         margin-top: 34px; } }
-    .audiences__actions .button:not(:first-child) {
+    .audience__actions .button:not(:first-child) {
       margin: 12px 0 0 0; }
       @media screen and (min-width: 1400px) {
-        .audiences__actions .button:not(:first-child) {
+        .audience__actions .button:not(:first-child) {
           margin: 0 0 0 10px; } }
-  .audiences__cards {
+  .audience__cards {
     margin: 40px 0 0 0; }
     @media screen and (min-width: 1400px) {
-      .audiences__cards {
+      .audience__cards {
         margin: 111px 0 0 0;
         display: flex;
         justify-content: space-between; } }
-    .audiences__cards-item {
+    .audience__cards-item {
       padding: 22px 20px 33px 20px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1.0e-05) 100%), #fff;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       text-align: center; }
       @media screen and (min-width: 1400px) {
-        .audiences__cards-item {
+        .audience__cards-item {
           padding: 22px 25px 33px 25px; } }
-      .audiences__cards-item:not(:last-child) {
+      .audience__cards-item:not(:last-child) {
         margin: 0 0 15px 0; }
         @media screen and (min-width: 1400px) {
-          .audiences__cards-item:not(:last-child) {
+          .audience__cards-item:not(:last-child) {
             margin: 0; } }
-      .audiences__cards-item:last-child .audiences__cards-item-img {
+      .audience__cards-item:last-child .audience__cards-item-img {
         margin: 0 80px 0 auto; }
         @media screen and (min-width: 1400px) {
-          .audiences__cards-item:last-child .audiences__cards-item-img {
+          .audience__cards-item:last-child .audience__cards-item-img {
             margin: 0 auto; } }
-      .audiences__cards-item:last-child .audiences__cards-item-title {
+      .audience__cards-item:last-child .audience__cards-item-title {
         margin: 22px 33px 0 auto; }
         @media screen and (min-width: 1400px) {
-          .audiences__cards-item:last-child .audiences__cards-item-title {
+          .audience__cards-item:last-child .audience__cards-item-title {
             margin: 22px auto 0 auto; } }
-      .audiences__cards-item:hover {
+      .audience__cards-item:hover {
         background-color: #3141c5;
         box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07); }
-        .audiences__cards-item:hover .audiences__cards-item-title {
+        .audience__cards-item:hover .audience__cards-item-title {
           color: #fff; }
       @media screen and (min-width: 1400px) {
-        .audiences__cards-item {
+        .audience__cards-item {
           width: calc(25% - 22.5px); } }
-      .audiences__cards-item-img {
+      .audience__cards-item-img {
         margin: 0 auto;
         display: block; }
-      .audiences__cards-item-title {
+      .audience__cards-item-title {
         font-weight: bold;
         font-size: 22px;
         line-height: 28px;
@@ -1133,43 +1133,43 @@ html {
         top: calc(50% - 8px);
         left: calc(50% - 3.5px); }
 
-.subscription-section {
+.order {
   background-color: #f4f5f7;
   padding: 50px 15px;
   display: flex;
   flex-direction: column;
   align-items: center; }
   @media screen and (min-width: 1400px) {
-    .subscription-section {
+    .order {
       flex-direction: row;
       justify-content: center;
       padding: 0; } }
-  .subscription-section .wrap {
+  .order .wrap {
     flex-direction: column; }
     @media screen and (min-width: 1400px) {
-      .subscription-section .wrap {
+      .order .wrap {
         flex-direction: row;
         justify-content: start; } }
-  .subscription-section__column:first-child {
+  .order__column:first-child {
     text-align: center; }
     @media screen and (min-width: 1400px) {
-      .subscription-section__column:first-child {
+      .order__column:first-child {
         margin-left: 94px; } }
   @media screen and (min-width: 1400px) {
-    .subscription-section__column:last-child {
+    .order__column:last-child {
       margin-left: auto;
       margin-right: 98px;
       margin-top: 106px;
       margin-bottom: 105px; } }
   @media screen and (min-width: 1400px) {
-    .subscription-section__image-block {
+    .order__image-block {
       margin: 73px 0 72px 0;
       display: flex; } }
-  .subscription-section__image-block-image {
+  .order__image-block-image {
     max-width: 100%;
     display: block;
     margin: 0 auto; }
-  .subscription-section__content-title {
+  .order__content-title {
     font-weight: bold;
     font-size: 40px;
     line-height: 40px;
@@ -1178,27 +1178,27 @@ html {
     color: #2b292d;
     margin: 40px 0 0 0; }
     @media screen and (min-width: 1400px) {
-      .subscription-section__content-title {
+      .order__content-title {
         text-align: left;
         margin: 0; } }
-  .subscription-section__content-description {
+  .order__content-description {
     font-size: 22px;
     line-height: 32px;
     color: #2b292d;
     margin: 18px 0 0 0;
     min-height: 167px; }
     @media screen and (min-width: 1400px) {
-      .subscription-section__content-description {
+      .order__content-description {
         min-height: 64px;
         max-width: 555px;
         margin: 12px 0 0 0; } }
-  .subscription-section__form {
+  .order__form {
     margin-top: 40px; }
     @media screen and (min-width: 1400px) {
-      .subscription-section__form {
+      .order__form {
         display: flex;
         margin-top: 26px; } }
-    .subscription-section__form-input {
+    .order__form-input {
       width: 100%;
       background: #ffffff;
       border: 1px solid rgba(43, 41, 45, 0.2);
@@ -1209,24 +1209,24 @@ html {
       line-height: 13px;
       text-align: center;
       height: 48px; }
-      .subscription-section__form-input::placeholder {
+      .order__form-input::placeholder {
         color: #2b292d; }
       @media screen and (min-width: 1400px) {
-        .subscription-section__form-input {
+        .order__form-input {
           margin-right: 10px;
           text-align: left; } }
     @media screen and (max-width: 320px) {
-      .subscription-section__form .button {
+      .order__form .button {
         width: 100%;
         margin-top: 12px; } }
-  .subscription-section__content-info {
+  .order__content-info {
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     color: #2b292d99;
     margin-top: 10px;
     margin-bottom: 0; }
-    .subscription-section__content-info-link {
+    .order__content-info-link {
       color: #3142c6; }
 
 .footer {
