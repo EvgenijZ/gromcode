@@ -256,6 +256,8 @@ html {
         max-width: 796px;
         max-height: 448px;
         margin-top: 0; } }
+    .headline__background img {
+      max-width: 100%; }
 
 .about__us {
   display: flex;
