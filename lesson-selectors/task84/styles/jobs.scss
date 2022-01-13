@@ -36,7 +36,7 @@
       #{$this}-arrow {
         background-color: $color_dark_blue_alt;
         &::after {
-          content: url('../images/other/arrow-white.png');
+          content: url('https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-arrow-right-white.png');
         }
       }
       #{$this}-title {
@@ -78,7 +78,7 @@
         background-color: #fff;
       }
       &::after {
-        content: url('../images/other/arrow-grey.png');
+        content: url('https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-arrow-right.png');
         width: 7px;
         height: 16px;
         position: absolute;

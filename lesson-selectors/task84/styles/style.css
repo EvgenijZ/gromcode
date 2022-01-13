@@ -1091,7 +1091,7 @@ html {
       .jobs__item:hover .jobs__item-arrow {
         background-color: #3141c5; }
         .jobs__item:hover .jobs__item-arrow::after {
-          content: url("../images/other/arrow-white.png"); }
+          content: url("https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-arrow-right-white.png"); }
       .jobs__item:hover .jobs__item-title {
         color: #fff; }
       .jobs__item:hover .jobs__item-description {
@@ -1126,7 +1126,7 @@ html {
         .jobs__item-arrow {
           background-color: #fff; } }
       .jobs__item-arrow::after {
-        content: url("../images/other/arrow-grey.png");
+        content: url("https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-arrow-right.png");
         width: 7px;
         height: 16px;
         position: absolute;
