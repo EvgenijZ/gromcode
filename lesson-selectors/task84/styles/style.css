@@ -286,47 +286,47 @@ main {
     .headline__background img {
       max-width: 100%; }
 
-.about__us {
+.about {
   display: flex;
   flex-direction: column;
   background-color: #f4f5f7;
   padding: 26px 15px 46px 15px; }
   @media screen and (min-width: 1400px) {
-    .about__us {
+    .about {
       padding: 77px 0 76px 0;
       margin: 0 0 30px 0;
       flex-direction: row;
       justify-content: center; } }
-  .about__us .wrap {
+  .about .wrap {
     flex-direction: column; }
     @media screen and (min-width: 1400px) {
-      .about__us .wrap {
+      .about .wrap {
         justify-content: space-between;
         flex-direction: row; } }
-  .about__us-column {
+  .about-column {
     margin-top: 20px;
     font-size: 22px;
     line-height: 32px;
     color: #2b292d; }
     @media screen and (max-width: 320px) {
-      .about__us-column:first-child {
+      .about-column:first-child {
         min-height: 180px; } }
     @media screen and (min-width: 1400px) {
-      .about__us-column {
+      .about-column {
         max-width: 555px;
         height: 102px;
         margin-top: 0; } }
-  .about__us-title {
+  .about-title {
     margin: 0;
     font-weight: bold;
     font-weight: bold;
     font-size: 22px;
     line-height: 32px;
     color: #2b292d; }
-  .about__us-description {
+  .about-description {
     margin: 8px 0 0 0; }
     @media screen and (min-width: 1400px) {
-      .about__us-description {
+      .about-description {
         font-size: 22px;
         line-height: 32px;
         color: #2b292d; } }
@@ -817,7 +817,7 @@ main {
     .user-cards .user-card:hover {
       background-color: #3141c5;
       box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07); }
-      .user-cards .user-card:hover .user-cards .user-card-title {
+      .user-cards .user-card:hover .user-card__title {
         color: #fff; }
     @media screen and (min-width: 1400px) {
       .user-cards .user-card {
@@ -1040,19 +1040,19 @@ main {
       max-width: 100%;
       display: flex; }
 
-.hiring-section {
+.hiring {
   padding: 50px 15px; }
   @media screen and (min-width: 1400px) {
-    .hiring-section {
+    .hiring {
       padding: 106px 0 107px 0;
       display: flex;
       justify-content: center; } }
-  .hiring-section .wrap {
+  .hiring .wrap {
     flex-direction: column; }
     @media screen and (min-width: 1400px) {
-      .hiring-section .wrap {
+      .hiring .wrap {
         max-width: 750px; } }
-  .hiring-section__title {
+  .hiring__title {
     font-weight: bold;
     font-size: 40px;
     line-height: 40px;
@@ -1062,28 +1062,28 @@ main {
     margin: 0;
     min-height: 45px; }
     @media screen and (min-width: 1400px) {
-      .hiring-section__title {
+      .hiring__title {
         font-size: 56px;
         line-height: 56px;
         letter-spacing: -0.5px;
         min-height: 62px; } }
-  .hiring-section__description {
+  .hiring__description {
     font-size: 24px;
     line-height: 34px;
     text-align: center;
     color: #2b292d;
     margin: 18px 0 0 0; }
     @media screen and (min-width: 1400px) {
-      .hiring-section__description {
+      .hiring__description {
         max-width: 555px;
         margin: 20px auto 0 auto;
         min-height: 72px; } }
-  .hiring-section .actions {
+  .hiring .actions {
     text-align: center; }
-    .hiring-section .actions .button {
+    .hiring .actions .button {
       margin-top: 30px; }
       @media screen and (min-width: 1400px) {
-        .hiring-section .actions .button {
+        .hiring .actions .button {
           margin-top: 28px; } }
 
 .jobs {
