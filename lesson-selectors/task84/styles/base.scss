@@ -15,8 +15,9 @@ body {
 }
 
 .hide-mobile {
-  @include max_width320 {
-    display: none;
+  display: none;
+  @include min_width1400 {
+    display: block;
   }
 }
 

@@ -67,9 +67,11 @@ html {
     margin: 0 auto;
     position: relative; } }
 
-@media screen and (max-width: 320px) {
-  .hide-mobile {
-    display: none; } }
+.hide-mobile {
+  display: none; }
+  @media screen and (min-width: 1400px) {
+    .hide-mobile {
+      display: block; } }
 
 @media screen and (min-width: 1400px) {
   .hide-desktop {
@@ -780,55 +782,56 @@ main {
       @media screen and (min-width: 1400px) {
         .audience__actions .button:not(:first-child) {
           margin: 0 0 0 10px; } }
-  .audience__cards {
-    margin: 40px 0 0 0; }
+
+.user-cards {
+  margin: 40px 0 0 0; }
+  @media screen and (min-width: 1400px) {
+    .user-cards {
+      margin: 111px 0 0 0;
+      display: flex;
+      justify-content: space-between; } }
+  .user-cards .user-card {
+    padding: 22px 20px 33px 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1.0e-05) 100%), #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center; }
     @media screen and (min-width: 1400px) {
-      .audience__cards {
-        margin: 111px 0 0 0;
-        display: flex;
-        justify-content: space-between; } }
-    .audience__cards-item {
-      padding: 22px 20px 33px 20px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1.0e-05) 100%), #fff;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      text-align: center; }
+      .user-cards .user-card {
+        padding: 22px 25px 33px 25px; } }
+    .user-cards .user-card:not(:last-child) {
+      margin: 0 0 15px 0; }
       @media screen and (min-width: 1400px) {
-        .audience__cards-item {
-          padding: 22px 25px 33px 25px; } }
-      .audience__cards-item:not(:last-child) {
-        margin: 0 0 15px 0; }
-        @media screen and (min-width: 1400px) {
-          .audience__cards-item:not(:last-child) {
-            margin: 0; } }
-      .audience__cards-item:last-child .audience__cards-item-img {
-        margin: 0 80px 0 auto; }
-        @media screen and (min-width: 1400px) {
-          .audience__cards-item:last-child .audience__cards-item-img {
-            margin: 0 auto; } }
-      .audience__cards-item:last-child .audience__cards-item-title {
-        margin: 22px 33px 0 auto; }
-        @media screen and (min-width: 1400px) {
-          .audience__cards-item:last-child .audience__cards-item-title {
-            margin: 22px auto 0 auto; } }
-      .audience__cards-item:hover {
-        background-color: #3141c5;
-        box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07); }
-        .audience__cards-item:hover .audience__cards-item-title {
-          color: #fff; }
+        .user-cards .user-card:not(:last-child) {
+          margin: 0; } }
+    .user-cards .user-card:last-child .user-cards .user-card__img {
+      margin: 0 80px 0 auto; }
       @media screen and (min-width: 1400px) {
-        .audience__cards-item {
-          width: calc(25% - 22.5px); } }
-      .audience__cards-item-img {
-        margin: 0 auto;
-        display: block; }
-      .audience__cards-item-title {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 28px;
-        text-align: center;
-        color: #2b292d;
-        margin: 22px 0 0 0; }
+        .user-cards .user-card:last-child .user-cards .user-card__img {
+          margin: 0 auto; } }
+    .user-cards .user-card:last-child .user-cards .user-card__title {
+      margin: 22px 33px 0 auto; }
+      @media screen and (min-width: 1400px) {
+        .user-cards .user-card:last-child .user-cards .user-card__title {
+          margin: 22px auto 0 auto; } }
+    .user-cards .user-card:hover {
+      background-color: #3141c5;
+      box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07); }
+      .user-cards .user-card:hover .user-cards .user-card-title {
+        color: #fff; }
+    @media screen and (min-width: 1400px) {
+      .user-cards .user-card {
+        width: calc(25% - 22.5px); } }
+    .user-cards .user-card__img {
+      margin: 0 auto;
+      display: block; }
+    .user-cards .user-card__title {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 28px;
+      text-align: center;
+      color: #2b292d;
+      margin: 22px 0 0 0; }
 
 .communication {
   padding: 50px 15px; }
