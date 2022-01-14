@@ -5,7 +5,9 @@
     background-color: #fff;
     border: none;
     border-left: 1px solid #00000026;
-    padding: 25px 20px; }
+    padding: 20px;
+    display: flex;
+    align-items: center; }
     .button__hamburger-icon {
       width: 18px;
       height: 13px; }
@@ -205,7 +207,8 @@ main {
       padding: 0 0 126px 0;
       display: flex;
       justify-content: center;
-      margin-top: 76px; } }
+      max-width: 1140px;
+      margin: 76px auto 0 auto; } }
   .headline .wrap {
     position: relative;
     flex-direction: column;
@@ -217,8 +220,7 @@ main {
         position: relative;
         z-index: 1;
         margin-right: auto;
-        padding: 0;
-        margin-left: -7px; } }
+        padding: 0; } }
   .headline__title {
     margin: 0;
     font-weight: bold;
@@ -234,20 +236,20 @@ main {
         letter-spacing: -0.5px;
         min-height: 165px;
         max-width: 754px;
-        margin-left: 0; } }
+        margin-left: 0;
+        margin-top: 8px; } }
   .headline__description {
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
     color: #2b292d;
-    margin: 24px 0 0 0;
+    margin: 14px 0 0 0;
     min-height: 172px; }
     @media screen and (min-width: 1400px) {
       .headline__description {
         margin-top: 34px;
         min-height: 102px;
-        max-width: 456px;
-        margin-left: 3px; } }
+        max-width: 456px; } }
   .headline__actions {
     display: flex;
     flex-direction: column;
@@ -255,8 +257,7 @@ main {
     @media screen and (min-width: 1400px) {
       .headline__actions {
         margin-top: 58px;
-        flex-direction: row;
-        margin-left: 3px; } }
+        flex-direction: row; } }
     .headline__actions .button {
       margin-top: 15px; }
       @media screen and (min-width: 1400px) {
@@ -274,7 +275,7 @@ main {
         position: absolute;
         z-index: 0;
         top: 8px;
-        right: -108px;
+        right: -105px;
         max-width: 796px;
         max-height: 448px;
         margin-top: 0; } }
