@@ -1,1 +1,1 @@
-export const getEvenNumbers = numbers => [...numbers].filter(number => number % 2 === 0);
+export const getEvenNumbers = numbers => [...numbers].filter(number => number % 2 === 0)

@@ -1,4 +1,4 @@
-import { getEvenNumbers } from './index.js';
+import { getEvenNumbers } from './index.js'
 
 it('should 17 is 17', () => {
     expect(17).toEqual(17);
