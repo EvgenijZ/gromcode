@@ -20,6 +20,10 @@ const renderTasks = tasksList => {
         const li = document.createElement('li');
         li.classList.add('list__item');
 
+        if (done) {
+            li.classList.add('list__item_done');
+        }
+
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = done;
