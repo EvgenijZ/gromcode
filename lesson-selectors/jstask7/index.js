@@ -18,11 +18,10 @@ const renderTasks = tasksList => {
     const items = tasksList.map(({ text, done }) => {
         console.log(text);
         const li = document.createElement('li');
-        li.classList.add('list__item');
-
-        if (done) {
-            li.classList.add('list__item_done');
-        }
+        li.classList.add.apply(
+            li.classList,
+            done ? ['list__item', 'list__item_done'] : ['list__item']
+        );
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
