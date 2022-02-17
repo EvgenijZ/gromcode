@@ -15,8 +15,7 @@ const tasks = [
 const renderTasks = tasksList => {
     const list = document.querySelector('.list');
 
-    const items = tasksList.map(({ text, done }) => {
-        console.log(text);
+    const items = tasksList.sort((a, b) => a.done - b.done).map(({ text, done }) => {
         const li = document.createElement('li');
         li.classList.add.apply(
             li.classList,
