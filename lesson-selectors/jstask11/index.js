@@ -24,13 +24,13 @@ const removeHandlers = () => {
 }
 
 const attachHandlers = () => {
-    divElement.addEventListener('click', clickHandler.bind(null, 'DIV', 'green'));
-    pElement.addEventListener('click', clickHandler.bind(null, 'P', 'green'));
-    spanElement.addEventListener('click', clickHandler.bind(null, 'SPAN', 'green'));
-
     divElement.addEventListener('click', clickHandler.bind(null, 'DIV', 'grey', true));
     pElement.addEventListener('click', clickHandler.bind(null, 'P', 'grey', true));
     spanElement.addEventListener('click', clickHandler.bind(null, 'SPAN', 'grey', true));
+
+    divElement.addEventListener('click', clickHandler.bind(null, 'DIV', 'green'));
+    pElement.addEventListener('click', clickHandler.bind(null, 'P', 'green'));
+    spanElement.addEventListener('click', clickHandler.bind(null, 'SPAN', 'green'));
 }
 
 clearBtn.addEventListener('click', () => clearList());
