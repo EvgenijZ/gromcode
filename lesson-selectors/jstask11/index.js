@@ -1,6 +1,6 @@
 'use strict';
 
-
+const eventsList = document.querySelector('.events-list');
 const divElement = document.querySelector('.rect_div');
 const pElement = document.querySelector('.rect_p');
 const spanElement = document.querySelector('.rect_span');
@@ -9,7 +9,6 @@ const removeHandlersBtn = document.querySelector('.remove-handlers-btn');
 const attachHandlersBtn = document.querySelector('.attach-handlers-btn');
 
 const logTarget = (text, color) => {
-    const eventsList = document.querySelector('.events-list');
     eventsList.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
 }
 
@@ -26,9 +25,12 @@ const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
 
 
 const removeHandlers = () => {
-    divElement.removeEventListener('click', divElementHandler);
-    pElement.removeEventListener('click', pElementHandler);
-    spanElement.removeEventListener('click', spanElementHandler);
+    divElement.removeEventListener('click', logGreenDiv);
+    divElement.removeEventListener('click', logGreyDiv, true);
+    pElement.removeEventListener('click', logGreenP);
+    pElement.removeEventListener('click', logGreyP, true);
+    spanElement.removeEventListener('click', logGreenSpan);
+    spanElement.removeEventListener('click', logGreySpan, true);
 }
 
 const attachHandlers = () => {
