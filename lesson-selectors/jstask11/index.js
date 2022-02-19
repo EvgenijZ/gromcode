@@ -14,18 +14,18 @@ const addSpanToList = (text, color) => {
 const clearList = () => eventsList.innerHTML = '';
 
 const divElementHandler = () => {
+    addSpanToList('DIV', 'green');
     addSpanToList('DIV', 'grey', true);
-    addSpanToList('DIV', 'green')
 }
 
 const pElementHandler = () => {
+    addSpanToList('P', 'green');
     addSpanToList('P', 'grey', true);
-    addSpanToList('P', 'green')
 }
 
 const spanElementHandler = () => {
+    addSpanToList('SPAN', 'green');
     addSpanToList('SPAN', 'grey', true);
-    addSpanToList('SPAN', 'green')
 }
 
 const removeHandlers = () => {
