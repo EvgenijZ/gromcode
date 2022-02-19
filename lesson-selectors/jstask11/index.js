@@ -13,31 +13,24 @@ const addSpanToList = (text, color) => {
 }
 const clearList = () => eventsList.innerHTML = '';
 
-const divElementHandler = () => {
-    addSpanToList('DIV', 'grey', true);
-    addSpanToList('DIV', 'green')
-}
-
-const pElementHandler = () => {
-    addSpanToList('P', 'grey', true);
-    addSpanToList('P', 'green')
-}
-
-const spanElementHandler = () => {
-    addSpanToList('SPAN', 'grey', true);
-    addSpanToList('SPAN', 'green')
+const clickHandler = function () {
+    addSpanToList(...arguments);
 }
 
 const removeHandlers = () => {
-    divElement.removeEventListener('click', divElementHandler);
-    pElement.removeEventListener('click', pElementHandler);
-    spanElement.removeEventListener('click', spanElementHandler);
+    divElement.removeEventListener('click', clickHandler);
+    pElement.removeEventListener('click', clickHandler);
+    spanElement.removeEventListener('click', clickHandler);
 }
 
 const attachHandlers = () => {
-    divElement.addEventListener('click', divElementHandler);
-    pElement.addEventListener('click', pElementHandler);
-    spanElement.addEventListener('click', spanElementHandler);
+    divElement.addEventListener('click', clickHandler.bind(null, 'DIV', 'green'));
+    pElement.addEventListener('click', clickHandler.bind(null, 'P', 'green'));
+    spanElement.addEventListener('click', clickHandler.bind(null, 'SPAN', 'green'));
+
+    divElement.addEventListener('click', clickHandler.bind(null, 'DIV', 'grey', true));
+    pElement.addEventListener('click', clickHandler.bind(null, 'P', 'grey', true));
+    spanElement.addEventListener('click', clickHandler.bind(null, 'SPAN', 'grey', true));
 }
 
 clearBtn.addEventListener('click', () => clearList());
