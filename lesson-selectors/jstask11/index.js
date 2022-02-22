@@ -1,50 +1,64 @@
 'use strict';
 
-const eventsList = document.querySelector('.events-list');
-const divElement = document.querySelector('.rect_div');
-const pElement = document.querySelector('.rect_p');
-const spanElement = document.querySelector('.rect_span');
-const clearBtn = document.querySelector('.clear-btn');
-const removeHandlersBtn = document.querySelector('.remove-handlers-btn');
-const attachHandlersBtn = document.querySelector('.attach-handlers-btn');
+const loginForm = document.querySelector('.login-form');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('.submit-button');
 
-const logTarget = (text, color) => {
-    eventsList.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
+const isEmpty = (el) => el.value.length
+const isEmail = (el) => el.value.includes('@')
+const sendData = (data) => alert(JSON.stringify(data))
+const setError = (error) => errors.push(error)
+const isNotEmptyObject = (obj) => obj.email && obj.password
+
+let errors = [];
+
+const renderErrors = (elementName) => {
+    errors.map(error => {
+        if (error.name === elementName) {
+            const el = document.querySelector(`#${error.name}`);
+            el.parentNode.querySelector('.error-text').textContent += `${error.message} `;
+        }
+    });
 }
 
-const clearList = () => eventsList.innerHTML = '';
-
-const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
-const logGreyDiv = logTarget.bind(null, 'DIV', 'grey');
-
-const logGreenP = logTarget.bind(null, 'P', 'green');
-const logGreyP = logTarget.bind(null, 'P', 'grey');
-
-const logGreenSpan = logTarget.bind(null, 'SPAN', 'green');
-const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
-
-
-const removeHandlers = () => {
-    divElement.removeEventListener('click', logGreenDiv);
-    divElement.removeEventListener('click', logGreyDiv, true);
-    pElement.removeEventListener('click', logGreenP);
-    pElement.removeEventListener('click', logGreyP, true);
-    spanElement.removeEventListener('click', logGreenSpan);
-    spanElement.removeEventListener('click', logGreySpan, true);
+const clearErrors = (elementName) => {
+    errors = elementName ? errors.filter(({ name }) => {
+        if (elementName === name) {
+            const el = document.querySelector(`#${elementName}`);
+            el.parentNode.querySelector('.error-text').textContent = '';
+        } else {
+            return elementName !== name;
+        }
+    }) : [];
+    return errors;
 }
 
-const attachHandlers = () => {
-    divElement.addEventListener('click', logGreyDiv, true);
-    pElement.addEventListener('click', logGreyP, true);
-    spanElement.addEventListener('click', logGreySpan, true);
+const emailHandler = (e) => {
+    clearErrors('email');
 
-    divElement.addEventListener('click', logGreenDiv);
-    pElement.addEventListener('click', logGreenP);
-    spanElement.addEventListener('click', logGreenSpan);
+    if (!isEmpty(e.target)) setError({ name: 'email', message: 'Required' });
+    if (!isEmail(e.target)) setError({ name: 'email', message: 'Should be an email' });
+
+    renderErrors('email');
 }
 
-clearBtn.addEventListener('click', () => clearList());
-removeHandlersBtn.addEventListener('click', () => removeHandlers());
-attachHandlersBtn.addEventListener('click', () => attachHandlers());
+const passwordHandler = (e) => {
+    clearErrors('password');
 
-attachHandlers();
+    if (!isEmpty(e.target)) setError({ name: 'password', message: 'Required' });
+
+    renderErrors('password');
+}
+
+const formHandler = (e) => {
+    e.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(loginForm));
+    if (!errors.length && isNotEmptyObject(formData)) sendData(formData);
+}
+
+passwordInput.addEventListener('input', passwordHandler);
+emailInput.addEventListener('input', emailHandler);
+loginForm.addEventListener('submit', formHandler);
+submitButton.addEventListener('click', formHandler);
