@@ -3,6 +3,7 @@
 const loginForm = document.querySelector('.login-form');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('.submit-button');
 
 const isEmpty = (el) => el.value.length
 const isEmail = (el) => el.value.includes('@')
@@ -60,3 +61,4 @@ const formHandler = (e) => {
 passwordInput.addEventListener('input', passwordHandler);
 emailInput.addEventListener('input', emailHandler);
 loginForm.addEventListener('submit', formHandler);
+submitButton.addEventListener('click', formHandler);
