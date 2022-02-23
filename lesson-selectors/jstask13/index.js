@@ -45,7 +45,7 @@ const createSectorSeat = (sectorLine) => {
             const seatPosition = e.target.dataset.sectorSeat;
             const linePosition = e.target.closest('.sector__line').dataset.sectorLine;
             const sectorPosition = e.target.closest('.sector').dataset.sector;
-            boardElement.textContent = `S - ${sectorPosition} L - ${linePosition} S - ${seatPosition}`;
+            boardElement.textContent = `S ${sectorPosition} - L ${linePosition} - S ${seatPosition}`;
         });
         sectorLine.append(seat);
     });
