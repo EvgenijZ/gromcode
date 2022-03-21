@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 22px;
+  font-family: Tahoma, sans-serif; }
+
+.counter {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center; }
+  .counter__text {
+    margin: 0 15px;
+    font-size: 25px; }
+  .counter__button {
+    background-color: #fff;
+    border: 2px solid #afafaf;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 25px; }
+    .counter__button:hover {
+      background-color: #e8e8e8; }
+
+/*# sourceMappingURL=style.css.map */
