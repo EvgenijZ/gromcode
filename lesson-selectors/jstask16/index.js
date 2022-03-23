@@ -1,6 +1,4 @@
-import storage from './storage.js';
-
-document.addEventListener('DOMContentLoaded', storage.init());
+import { getItem, setItem } from './storage.js';
 
 const listElem = document.querySelector('.list');
 const taskInput = document.querySelector('.task-input');
@@ -8,10 +6,10 @@ const createTaskBtn = document.querySelector('.create-task-btn');
 
 const createTask = () => {
     if (taskInput.value.length) {
-        const tasks = storage.getTasks();
-        tasks.push({ text: taskInput.value, done: false, id: storage.getTasks().length + 1 });
-        storage.setTasks(tasks);
-        renderTasks(storage.getTasks());
+        const tasks = getItem('tasksList') || [];
+        const task = tasks.concat({ text: taskInput.value, done: false, id: Math.random() });
+        setItem('tasksList', task);
+        renderTasks();
         taskInput.value = null;
     }
 }
@@ -23,17 +21,19 @@ const updateStatusTask = () => {
 
     listItemsCheckbox.forEach((item) => {
         item.addEventListener('click', (e) => {
-            const tasks = storage.getTasks();
+            const tasks = getItem('tasksList');
             tasks.map((task) => {
                 if (task.id == e.target.dataset.id) task.done = e.target.checked;
             });
-            storage.setTasks(tasks);
-            renderTasks(storage.getTasks());
+            setItem('tasksList', tasks);
+            renderTasks();
         });
     });
 }
 
-const renderTasks = tasksList => {
+const renderTasks = () => {
+
+    const tasksList = getItem('tasksList') || [];
 
     listElem.innerHTML = null;
 
@@ -59,8 +59,13 @@ const renderTasks = tasksList => {
     updateStatusTask();
 };
 
-renderTasks(storage.getTasks());
+renderTasks();
 
-window.addEventListener('storage', () => renderTasks(storage.getTasks()));
+const onStorageChange = (e) => {
+    if (e.key !== 'tasksList') return;
+    renderTasks();
+}
 
-// put your code here
+window.addEventListener('storage', onStorageChange);
+
+document.addEventListener('DOMContentLoaded', renderTasks);
