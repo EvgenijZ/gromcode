@@ -30,11 +30,7 @@ const createUser = (userData) => {
 const clearForm = () => loginForm.reset();
 
 const checkDisabledSubmitBtn = () => {
-    if (loginForm.reportValidity()) {
-        submitButton.removeAttribute('disabled');
-        return loginForm.reportValidity();
-    }
-
-    submitButton.setAttribute('disabled', true);
-    return loginForm.reportValidity();
+    const result = !loginForm.reportValidity();
+    submitButton.disabled = result;
+    return result;
 }
