@@ -1,5 +1,4 @@
-import { getItem, setItem } from './storage.js';
-import { createTask, updateTask, deleteTask } from './taskGateway.js';
+import { getTask, getTasks, createTask, updateTask, deleteTask } from './taskGateway.js';
 
 const listElem = document.querySelector('.list');
 const taskInput = document.querySelector('.task-input');
@@ -9,8 +8,7 @@ export const createTaskItem = () => {
     if (!taskInput.value) return;
 
     createTask({ title: taskInput.value, done: false, createdAt: new Date().toISOString() })
-        .then(task => {
-            updateTasksList(task);
+        .then(_ => {
             renderTasks();
             clearInput();
         }).catch(error => console.error(new Error(error)));
@@ -22,15 +20,15 @@ const updateStatusTask = () => {
     listItemsCheckbox.forEach((item) => {
         item.addEventListener('click', (e) => {
             const taskId = e.target.dataset.id;
-            const tasks = getItem('tasksList');
-            const task = tasks.find(task => task.id === taskId);
-            if (!task) return;
+            getTask(taskId)
+                .then(task => {
+                    task.done = e.target.checked;
+                    return task;
+                })
+                .then(task => updateTask(task))
+                .then(() => renderTasks())
+                .catch(error => console.error(new Error(error)));
 
-            task.done = e.target.checked;
-            updateTask(task).then(() => {
-                setItem('tasksList', tasks);
-                renderTasks();
-            }).catch(error => console.error(new Error(error)));
         });
     });
 }
@@ -41,19 +39,9 @@ const removeTaskItem = () => {
     listItemBtn.forEach((item) => {
         item.addEventListener('click', (e) => {
             const taskId = e.target.dataset.id;
-            const tasks = getItem('tasksList');
-
-            deleteTask(taskId).then(() => {
-                setItem('tasksList', tasks.filter(t => t.id !== taskId));
-                renderTasks();
-            }).catch(error => console.error(new Error(error)));
+            deleteTask(taskId).then(() => renderTasks()).catch(error => console.error(new Error(error)));
         });
     });
-}
-
-const updateTasksList = (task) => {
-    let tasks = getItem('tasksList') || [];
-    setItem('tasksList', [...tasks, task]);
 }
 
 const clearInput = () => taskInput.value = null;
@@ -91,21 +79,21 @@ export const renderTasks = () => {
 
     clearTasksListDOM();
 
-    const tasksList = getItem('tasksList') || [];
+    getTasks().then(data => {
+        const tasksElems = data.sort((a, b) => a.done - b.done)
+            .map(({ title, done, id }) => {
+                const listItemElem = createListItem(done);
+                const checkbox = createListItemCheckbox(done, id);
+                const titleSpan = createListItemTitle(title);
+                const button = createListItemDeleteBtn(id);
+                listItemElem.append(checkbox, titleSpan, button);
+                return listItemElem;
+            });
 
-    const tasksElems = tasksList
-        .sort((a, b) => a.done - b.done)
-        .map(({ title, done, id }) => {
-            const listItemElem = createListItem(done);
-            const checkbox = createListItemCheckbox(done, id);
-            const titleSpan = createListItemTitle(title);
-            const button = createListItemDeleteBtn(id);
-            listItemElem.append(checkbox, titleSpan, button);
-            return listItemElem;
-        });
+        addTasksListDOM(tasksElems || []);
+        updateStatusTask();
+        removeTaskItem();
+    });
 
-    addTasksListDOM(tasksElems || []);
-    updateStatusTask();
-    removeTaskItem();
 };
 
