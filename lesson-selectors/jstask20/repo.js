@@ -3,15 +3,13 @@ import { showSpinner, hideSpinner } from './spinner.js';
 const repoListElem = document.querySelector('.repo-list');
 
 export const getUserRepos = (url) => {
-    showSpinner();
     return fetch(url).then(response => {
         if (!response.ok) alert('Failed to load data');
         return response.json();
     }).then(data => {
         renderUserRepo(data);
         return data;
-    }).catch(err => console.error(err))
-        .finally(hideSpinner());
+    }).catch(err => console.error(err));
 }
 
 const createRepoElement = (name) => {

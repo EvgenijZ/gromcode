@@ -27,7 +27,7 @@ export const getUserData = () => {
         return data;
     }).then(({ repos_url }) => getUserRepos(repos_url))
         .catch(err => console.error(err))
-        .finally(hideSpinner());
+        .finally(() => hideSpinner());
 }
 
 const renderUser = (userData) => {
