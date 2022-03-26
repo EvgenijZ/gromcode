@@ -1,5 +1,4 @@
 import { getUserRepos } from './repo.js';
-import { showSpinner, hideSpinner } from './spinner.js';
 
 const usersEndpoint = 'https://api.github.com/users/';
 const userAvatar = document.querySelector('.user__avatar');
@@ -18,19 +17,13 @@ const setUserBio = (name, location) => {
 export const getUserData = () => {
     const nameFormInput = document.querySelector('.name-form__input');
     if (!nameFormInput.value) return;
-    showSpinner();
     return fetch(`${usersEndpoint}${nameFormInput.value}`).then(response => {
         if (!response.ok) alert('Failed to load data');
         return response.json();
-    }).then(data => {
-        renderUser(data);
-        return data;
-    }).then(({ repos_url }) => getUserRepos(repos_url))
-        .catch(err => console.error(err))
-        .finally(() => hideSpinner());
+    }).catch(err => console.error(err));
 }
 
-const renderUser = (userData) => {
+export const renderUser = (userData) => {
     const { avatar_url, name, location } = userData;
     setUserAvatar(avatar_url);
     setUserBio(name, location);
