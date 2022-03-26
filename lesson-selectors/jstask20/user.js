@@ -11,7 +11,7 @@ export const setUserAvatar = (src) => {
 
 const setUserBio = (name, location) => {
     userName.textContent = name;
-    userLocation.textContent = location;
+    userLocation.textContent = location ? `from ${location}` : '';
 }
 
 export const getUserData = () => {

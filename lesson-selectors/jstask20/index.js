@@ -13,10 +13,7 @@ const onSearchUser = () => {
         renderUser(data);
         return data;
     }).then(({ repos_url }) => getUserRepos(repos_url))
-        .then(data => {
-            renderUserRepo(data);
-            return data;
-        })
+        .then(data => renderUserRepo(data))
         .catch(err => console.error(err))
         .finally(() => hideSpinner());
 }
