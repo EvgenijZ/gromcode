@@ -16,7 +16,7 @@ export const getUserData = async () => {
     const nameFormInput = document.querySelector('.name-form__input');
     if (!nameFormInput.value) return;
     const response = await fetch(`${usersEndpoint}${nameFormInput.value}`);
-    if (!response.ok) throw new Error('Failed to load data');
+    if (!response.ok) alert('Failed to load data');
     return await response.json();
 }
 

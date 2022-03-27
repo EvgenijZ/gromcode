@@ -2,7 +2,7 @@ const repoListElem = document.querySelector('.repo-list');
 
 export const getUserRepos = async (url) => {
     const response = await fetch(url);
-    if (!response.ok) throw new Error('Failed to load data');
+    if (!response.ok) alert('Failed to load data');
     return response.json();
 }
 
