@@ -1,4 +1,4 @@
-import { addImageV2 } from './addImageV.js';
+import { addImage } from './addImage.js';
 
 const addImageV2 = url => {
     return new Promise((resolve, reject) => {
