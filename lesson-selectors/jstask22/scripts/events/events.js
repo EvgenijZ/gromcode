@@ -97,13 +97,15 @@ export const renderEvents = () => {
 
   const currentWeekDate = getItem("displayedWeekStart");
 
-  const events = getItem("events") || [];
-  events.filter(
+  const events = getItem("events");
+  if (!events) return;
+  const filteredEvents = events.filter(
     (event) =>
       moment(event.start).date() >= moment(currentWeekDate).date() &&
       moment(event.start).date() <= moment(currentWeekDate).date() + 7
   );
-  events.map((event) => {
+
+  filteredEvents.map((event) => {
     const currentDay = document.querySelector(
       `.calendar__day[data-day="${moment(event.start).format("D")}"]`
     );

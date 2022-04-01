@@ -24,8 +24,8 @@ const onChangeWeek = (event) => {
       setItem(
         "displayedWeekStart",
         new Date(
-          getItem("displayedWeekStart").setDate(
-            getItem("displayedWeekStart").getDate() - 7
+          new Date(getItem("displayedWeekStart")).setDate(
+            new Date(getItem("displayedWeekStart")).getDate() - 7
           )
         )
       );
@@ -35,8 +35,8 @@ const onChangeWeek = (event) => {
       setItem(
         "displayedWeekStart",
         new Date(
-          getItem("displayedWeekStart").setDate(
-            getItem("displayedWeekStart").getDate() + 7
+          new Date(getItem("displayedWeekStart")).setDate(
+            new Date(getItem("displayedWeekStart")).getDate() + 7
           )
         )
       );
