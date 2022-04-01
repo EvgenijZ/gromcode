@@ -1,0 +1,30 @@
+.settings {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+	text-align: center;
+
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+	}
+}
+
+.colors {
+	display: flex;
+	margin: 40px;
+	width: 350px;
+	flex-wrap: wrap;
+
+	&__item {
+		margin: 10px;
+	}
+
+	&__background {
+		width: 50px;
+		height: 50px;
+		border-radius: 3px;
+	}
+}
