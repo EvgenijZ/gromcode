@@ -97,12 +97,13 @@ export const renderEvents = () => {
 
   const currentWeekDate = getItem("displayedWeekStart");
 
-  const events = getItem("events");
+  const events = getItem("events") || [];
   if (!events) return;
   const filteredEvents = events.filter(
     (event) =>
-      moment(event.start).date() >= moment(currentWeekDate).date() &&
-      moment(event.start).date() <= moment(currentWeekDate).date() + 7
+      moment(event.start).date() >= moment(currentWeekDate).date() ||
+      moment(event.start).date() <=
+      moment(currentWeekDate).add(6, "days").date()
   );
 
   filteredEvents.map((event) => {
