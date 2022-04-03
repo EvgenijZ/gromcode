@@ -1,4 +1,4 @@
-import { createLogger } from '../logger.js';
+import { createLogger } from '../logger';
 
 it('should return logs empty array', () => {
     const result = [];
