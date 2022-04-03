@@ -1,4 +1,4 @@
-import { sum, mult } from '../calculator.js';
+import { sum, mult } from '../calculator';
 
 it('should return sum 3', function () {
     const result = 3;
