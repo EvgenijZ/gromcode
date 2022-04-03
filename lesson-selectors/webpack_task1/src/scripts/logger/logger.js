@@ -1,9 +1,15 @@
-export const createLogger = (loggerName) => {
+export const createLogger = name => {
     const logs = [];
 
     return {
-        getLogs: () => logs,
-        log: message => logs.push(`log - ${loggerName} - ${message}`),
-        error: error => logs.push(`error - ${loggerName} - ${error}`),
+        log(message) {
+            logs.push(`log - ${name} - ${message}`);
+        },
+        error(errorText) {
+            logs.push(`error - ${name} - ${errorText}`);
+        },
+        getLogs() {
+            return logs;
+        },
     }
 }
