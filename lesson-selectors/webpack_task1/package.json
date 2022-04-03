@@ -10,7 +10,7 @@
 		"clean": "rm -rf ./dist",
 		"copy:html": "cp ./src/index.html ./dist/index.html",
 		"copy:scripts": "cp -R ./src/scripts ./dist/scripts",
-		"build": "npm-run-all clean build:styles copy:html copy:scripts"
+		"build": "npm run clean && build:styles && copy:html && copy:scripts"
 	},
 	"keywords": [],
 	"author": "",
