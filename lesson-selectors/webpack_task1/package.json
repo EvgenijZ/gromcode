@@ -7,10 +7,10 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
+		"clean": "rm -rf ./dist",
 		"copy:html": "cp ./src/index.html ./dist/index.html",
 		"copy:scripts": "cp -R ./src/scripts ./dist/scripts",
-		"clean": "rm -rf ./dist",
-		"build": "npm-run-all clean build:styles copy:*"
+		"build": "npm-run-all clean build:styles copy:html copy:scripts"
 	},
 	"keywords": [],
 	"author": "",
