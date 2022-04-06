@@ -4,10 +4,20 @@
 			"@babel/preset-env",
 			{
 				"targets": {
-					"browsers": ["last 2 versions"]
+					"android": "99",
+					"chrome": "99",
+					"edge": "98",
+					"firefox": "97",
+					"ie": "10",
+					"ios": "15.2",
+					"opera": "82",
+					"safari": "15.2",
+					"samsung": "15"
 				},
+				"debug": true,
 				"useBuiltIns": "usage",
-				"corejs": 3
+				"corejs": 3,
+				"modules": false
 			}
 		]
 	]
