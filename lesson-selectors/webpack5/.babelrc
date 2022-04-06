@@ -4,13 +4,11 @@
 			"@babel/preset-env",
 			{
 				"targets": {
+					"chrome": "97",
 					"edge": "99",
 					"firefox": "98",
-					"chrome": "69",
-					"safari": "12",
-					"ios": "12",
-					"samsung": "16",
-					"android": "100"
+					"ios": "14.5",
+					"samsung": "16"
 				},
 				"useBuiltIns": "usage",
 				"corejs": 3,
