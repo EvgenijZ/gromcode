@@ -9,7 +9,8 @@
 		"test:watch": "jest --watch",
 		"build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
 		"clean": "rm -rf ./dist",
-		"build": "npm-run-all clean build:*"
+		"copy:html": "cp ./src/index.html ./dist/index.html",
+		"build": "npm-run-all clean build:* copy:html"
 	},
 	"keywords": [],
 	"author": "",
