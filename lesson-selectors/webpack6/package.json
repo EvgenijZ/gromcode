@@ -4,14 +4,12 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build:scripts": "babel ./src --out-dir=./dist",
+		"build:scripts": "babel ./src/scripts --out-dir=./dist/scripts",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
 		"clean": "rm -rf ./dist",
-		"copy:html": "cp ./src/index.html ./dist/index.html",
-		"copy:scripts": "cp -R ./src/scripts ./dist/scripts",
-		"build": "npm-run-all clean build:* copy:*"
+		"build": "npm-run-all clean build:*"
 	},
 	"keywords": [],
 	"author": "",
