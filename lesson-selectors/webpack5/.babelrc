@@ -3,13 +3,9 @@
 		[
 			"@babel/preset-env",
 			{
-				"targets": {
-					"browsers": ["last 2 versions", "> 1%"]
-				},
+				"targets": "> 1%",
 				"useBuiltIns": "usage",
-				"corejs": 3,
-				"modules": false,
-				"debug": true
+				"corejs": 3
 			}
 		]
 	]
