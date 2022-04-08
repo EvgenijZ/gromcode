@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build:scripts": "webpack --mode=production",
-		"watch": "webpack-dev-server --mode=development --devtool eval-source-maps --watch"
+		"build": "webpack --mode=production",
+		"start": "webpack-dev-server --mode=development --devtool eval-source-maps --watch"
 	},
 	"author": "",
 	"license": "ISC",
