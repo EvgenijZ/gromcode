@@ -37,15 +37,15 @@ module.exports = (env, argv) => {
                         },
                     ],
                 }
-            ],
-            plugins: [
-                new HtmlWebpackPlugin(),
-                new MiniCssExtractPlugin()
-            ],
-            devServer: {
-                hot: true,
-                port: 9000,
-            }
+            ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin(),
+            new MiniCssExtractPlugin()
+        ],
+        devServer: {
+            hot: true,
+            port: 9000,
         }
     }
 
