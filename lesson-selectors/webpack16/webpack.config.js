@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
@@ -14,10 +13,6 @@ module.exports = (env, argv) => {
         },
         module: {
             rules: [
-                {
-                    test: /\.js$/,
-                    use: ["babel-loader"],
-                },
                 {
                     test: /\.s?css$/,
                     use: [
@@ -41,16 +36,15 @@ module.exports = (env, argv) => {
                         },
                     ],
                 }
-            ],
-            plugins: [
-                new CleanWebpackPlugin(),
-                new HtmlWebpackPlugin(),
-                new MiniCssExtractPlugin()
-            ],
-            devServer: {
-                hot: true,
-                port: 9000,
-            }
+            ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin(),
+            new MiniCssExtractPlugin()
+        ],
+        devServer: {
+            hot: true,
+            port: 9000,
         }
     }
 
