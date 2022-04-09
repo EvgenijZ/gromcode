@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './list.css';
 
 const rootEl = document.querySelector('#root');
 
