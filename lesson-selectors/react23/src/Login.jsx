@@ -7,7 +7,7 @@ class Login extends React.Component {
 
 	render() {
 		return (
-			<button className='btn login' onClick={() => this.props.onLogin(true)}>
+			<button className='btn login' onClick={() => this.props.onLogin()}>
 				Login
 			</button>
 		);

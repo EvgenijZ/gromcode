@@ -7,7 +7,7 @@ class Logout extends React.Component {
 
 	render() {
 		return (
-			<button className='btn logout' onClick={() => this.props.onLogout(false)}>
+			<button className='btn logout' onClick={() => this.props.onLogout()}>
 				Logout
 			</button>
 		);
