@@ -3,14 +3,12 @@ import Offline from './Offline.jsx';
 import Online from './Online.jsx';
 
 export default class Status extends React.Component {
-	constructor(props) {
-		super(props);
-		this.isOnline = true;
-	}
-
 	render() {
 		return (
-			<div className='status'>{this.isOnline ? <Online /> : <Offline />}</div>
+			<div className='status'>
+				<Online isOnline={true} />
+				<Offline isOffline={false} />
+			</div>
 		);
 	}
 }
