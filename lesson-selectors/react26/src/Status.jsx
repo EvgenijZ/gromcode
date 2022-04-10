@@ -6,8 +6,8 @@ export default class Status extends React.Component {
 	render() {
 		return (
 			<div className='status'>
-				<Online isOnline={true} />
-				<Offline isOffline={false} />
+				<Online isOnline={false} />
+				<Offline isOffline={true} />
 			</div>
 		);
 	}
