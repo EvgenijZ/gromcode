@@ -16,7 +16,7 @@ class Page extends React.Component {
 	render() {
 		return (
 			<div className='page'>
-				{this.state.message && <Message text={this.state.message} />}
+				<Message text={this.state.message} />
 				<div className='actions'>
 					<button
 						className='btn'
