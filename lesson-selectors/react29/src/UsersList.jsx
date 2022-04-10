@@ -42,7 +42,7 @@ export default class UsersList extends React.Component {
 
 		if (this.state.sort) {
 			usersList.sort((a, b) =>
-				this.state.sort === 'asc' ? a.age - b.age : b.age - a.age
+				this.state.sort === 'asc' ? b.age - a.age : a.age - b.age
 			);
 		}
 
