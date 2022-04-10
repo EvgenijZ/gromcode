@@ -1,5 +1,4 @@
 import React from 'react';
-import Message from './Message.jsx';
 import Page from './Page.jsx';
 
 class App extends React.Component {
@@ -18,12 +17,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		return (
-			<div className='page'>
-				<Message text={this.state.message} />
-				<Page changeMessage={this.setMessage} />
-			</div>
-		);
+		return <Page text={this.state.message} changeMessage={this.setMessage} />;
 	}
 }
 
