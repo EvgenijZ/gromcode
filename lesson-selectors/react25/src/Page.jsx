@@ -1,27 +1,40 @@
 import React from 'react';
 import Message from './Message.jsx';
 
-const Page = (props) => {
-	return (
-		<div className='page'>
-			{props.text && <Message text={props.text} />}
-			<div className='actions'>
-				<button
-					className='btn'
-					onClick={() => props.changeMessage('Hello, world!')}>
-					Text 1
-				</button>
-				<button
-					className='btn'
-					onClick={() => props.changeMessage('Another exciting text.')}>
-					Text 2
-				</button>
-				<button className='btn' onClick={() => props.changeMessage(null)}>
-					Clear
-				</button>
+class Page extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			message: null,
+		};
+	}
+
+	setMessage(message) {
+		this.setState({ message: message });
+	}
+	render() {
+		return (
+			<div className='page'>
+				{this.state.message && <Message text={this.state.message} />}
+				<div className='actions'>
+					<button
+						className='btn'
+						onClick={() => this.setMessage('Hello, world!')}>
+						Text 1
+					</button>
+					<button
+						className='btn'
+						onClick={() => this.setMessage('Another exciting text.')}>
+						Text 2
+					</button>
+					<button className='btn' onClick={() => this.setMessage(null)}>
+						Clear
+					</button>
+				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
 
 export default Page;
