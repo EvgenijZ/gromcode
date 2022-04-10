@@ -38,12 +38,14 @@ export default class UsersList extends React.Component {
 	}
 
 	render() {
-		const usersList = [...users];
+		let usersList;
 
 		if (this.state.sort) {
-			usersList.sort((a, b) =>
-				this.state.sort === 'asc' ? b.age - a.age : a.age - b.age
+			usersList = [...users].sort((a, b) =>
+				this.state.sort === 'asc' ? a.age - b.age : b.age - a.age
 			);
+		} else {
+			usersList = users;
 		}
 
 		return (
