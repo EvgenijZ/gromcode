@@ -22,7 +22,7 @@ export default class Dimensions extends React.Component {
 
 	setDimensions(e) {
 		this.setState({ width: e.target.innerWidth, height: e.target.innerHeight });
-		document.title = `${this.state.width} x ${this.state.height}`;
+		document.title = `${this.state.height} x ${this.state.width}`;
 	}
 
 	render() {
