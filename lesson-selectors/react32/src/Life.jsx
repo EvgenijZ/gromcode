@@ -17,8 +17,7 @@ export default class Life extends React.Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		console.log(nextState);
-		if (nextState.updateCounter < 1) return false;
+		if (nextState.updateCounter < 2) return false;
 		console.log(
 			'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
 		);
@@ -26,7 +25,7 @@ export default class Life extends React.Component {
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if (prevState.updateCounter >= 0)
+		if (prevState.updateCounter > 0)
 			console.log(
 				'componentDidUpdate(prevProps, prevState): some updates based on new props'
 			);
