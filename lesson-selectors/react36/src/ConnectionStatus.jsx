@@ -15,7 +15,8 @@ export default class ConnectionStatus extends React.Component {
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener(['online', 'offline'], () => this.onOnline);
+		window.removeEventListener('online', () => this.onOnline);
+		window.removeEventListener('offline', () => this.onOnline);
 	}
 
 	onOnline(status) {
