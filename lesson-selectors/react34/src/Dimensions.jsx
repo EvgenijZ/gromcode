@@ -13,7 +13,6 @@ export default class Dimensions extends React.Component {
 	}
 
 	componentDidMount() {
-		this.setDimensions();
 		window.addEventListener('resize', this.setDimensions);
 	}
 
@@ -29,7 +28,7 @@ export default class Dimensions extends React.Component {
 	render() {
 		return (
 			this.state.width && (
-				<div>{`${this.state.width} x ${this.state.height}`}</div>
+				<div className='dimensions'>{`${this.state.width}px - ${this.state.height}px`}</div>
 			)
 		);
 	}
