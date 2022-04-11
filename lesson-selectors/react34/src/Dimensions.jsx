@@ -13,16 +13,21 @@ export default class Dimensions extends React.Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('resize', this.setDimensions);
+		const { innerWidth, innerHeight } = window;
+		this.setDimensions(innerWidth, innerHeight);
+
+		window.addEventListener('resize', () =>
+			this.setDimensions(innerWidth, innerHeight)
+		);
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.setDimensions);
 	}
 
-	setDimensions(e) {
-		this.setState({ width: e.target.innerWidth, height: e.target.innerHeight });
-		document.title = `${this.state.height} x ${this.state.width}`;
+	setDimensions(width, height) {
+		this.setState({ width, height });
+		document.title = `${width} x ${height}`;
 	}
 
 	render() {
