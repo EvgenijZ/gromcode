@@ -13,6 +13,7 @@ export default class Dimensions extends React.Component {
 	}
 
 	componentDidMount() {
+		this.setDimensions();
 		window.addEventListener('resize', this.setDimensions);
 	}
 
