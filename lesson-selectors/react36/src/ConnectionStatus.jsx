@@ -24,9 +24,9 @@ export default class ConnectionStatus extends React.Component {
 
 	render() {
 		return this.state.isOnline ? (
-			<div className='status'>Online</div>
+			<div className='status'>online</div>
 		) : (
-			<div className='status status_offline'>Offline</div>
+			<div className='status status_offline'>offline</div>
 		);
 	}
 }
