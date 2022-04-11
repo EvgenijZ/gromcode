@@ -25,10 +25,9 @@ export default class Life extends React.Component {
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if (prevState.updateCounter > 0)
-			console.log(
-				'componentDidUpdate(prevProps, prevState): some updates based on new props'
-			);
+		console.log(
+			'componentDidUpdate(prevProps, prevState): some updates based on new props'
+		);
 	}
 
 	componentWillUnmount() {
