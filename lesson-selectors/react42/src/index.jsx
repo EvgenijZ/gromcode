@@ -4,4 +4,4 @@ import './styles.scss';
 import App from './App.jsx';
 
 const rootEl = document.querySelector('#root');
-ReactDOM.render(<App />, rootEl);
+ReactDOM.render(<App userId='github' />, rootEl);

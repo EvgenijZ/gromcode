@@ -6,7 +6,7 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			user: null,
+			userData: null,
 		};
 	}
 
@@ -24,9 +24,9 @@ class App extends React.Component {
 		return (
 			<div className='page'>
 				<header className='header'>
-					<UserMenu userData={this.state.user} />
+					<UserMenu userData={this.state.userData} />
 				</header>
-				<UserProfile userData={this.state.user} />
+				<UserProfile userData={this.state.userData} />
 			</div>
 		);
 	}
