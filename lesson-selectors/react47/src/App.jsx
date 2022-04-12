@@ -9,22 +9,27 @@ class App extends React.Component {
 			isOpen: false,
 		};
 
-		this.toggleDialog = this.toggleDialog.bind(this);
+		this.showDialog = this.showDialog.bind(this);
+		this.hideDialog = this.hideDialog.bind(this);
 	}
 
-	toggleDialog() {
-		this.setState({ isOpen: !this.state.isOpen });
+	showDialog() {
+		this.setState({ isOpen: true });
+	}
+
+	hideDialog() {
+		this.setState({ isOpen: false });
 	}
 
 	render() {
 		return (
 			<div className='app'>
-				<button className='btn' onClick={() => this.toggleDialog()}>
+				<button className='btn' onClick={() => this.showDialog()}>
 					Show dialog
 				</button>
 
 				{this.state.isOpen && (
-					<Dialog title='Demo title' onClose={this.toggleDialog}>
+					<Dialog title='Demo title' onClose={this.hideDialog}>
 						<p>
 							Use immutable array methods to work with data. It will help to
 							avoid bugs
