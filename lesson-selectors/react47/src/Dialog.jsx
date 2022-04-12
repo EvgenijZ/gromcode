@@ -2,6 +2,7 @@ import React from 'react';
 
 export default class Dialog extends React.Component {
 	render() {
+		if (!this.props.isOpen) return null;
 		return (
 			<div className='dialog'>
 				<div className='dialog__heading'>

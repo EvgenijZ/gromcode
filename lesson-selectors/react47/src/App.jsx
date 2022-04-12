@@ -28,14 +28,15 @@ class App extends React.Component {
 					Show dialog
 				</button>
 
-				{this.state.isOpen && (
-					<Dialog title='Demo title' onClose={this.hideDialog}>
-						<p>
-							Use immutable array methods to work with data. It will help to
-							avoid bugs
-						</p>
-					</Dialog>
-				)}
+				<Dialog
+					title='Demo title'
+					isOpen={this.state.isOpen}
+					onClose={this.hideDialog}>
+					<p>
+						Use immutable array methods to work with data. It will help to avoid
+						bugs
+					</p>
+				</Dialog>
 			</div>
 		);
 	}
