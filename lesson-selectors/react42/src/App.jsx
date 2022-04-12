@@ -11,7 +11,7 @@ class App extends React.Component {
 	}
 
 	fetchUser() {
-		fetch(' https://api.github.com/users/facebook')
+		fetch('https://api.github.com/users/gitHub')
 			.then((response) => response.json())
 			.then((user) => this.setState({ user }));
 	}
