@@ -18,6 +18,9 @@ export default class App extends React.Component {
 							</li>
 						</ul>
 
+						<Route exact path='/'>
+							<span>Select a user please</span>
+						</Route>
 						<Route path='/users/:userId'>
 							<User />
 						</Route>
