@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { UserContext } from './user.js';
-const UserMenu = () => {
-	const { name, avatar_url } = useContext(UserContext);
-	return (
-		<div className='menu'>
-			<span className='menu__greeting'>Hello, {name}</span>
-			<img alt='User Avatar' src={avatar_url} className='menu__avatar' />
-		</div>
-	);
-};
+
+class UserMenu extends React.Component {
+	render() {
+		return (
+			<div className='menu'>
+				<span className='menu__greeting'>{`Hello, ${this.context.name}`}</span>
+				<img
+					className='menu__avatar'
+					src={`${this.context.avatar_url}`}
+					alt='User Avatar'
+				/>
+			</div>
+		);
+	}
+}
+
+UserMenu.contextType = UserContext;
 
 export default UserMenu;
