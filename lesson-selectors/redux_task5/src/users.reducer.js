@@ -1,7 +1,8 @@
 import { ADD, REMOVE } from './users.actions.js';
-import { baseState } from './store.js';
 
-export default (state = baseState, action) => {
+const initialState = { usersList: [] };
+
+export default (state = initialState, action) => {
     switch (action.type) {
         case ADD:
             return {
@@ -11,7 +12,7 @@ export default (state = baseState, action) => {
         case REMOVE:
             return {
                 ...state,
-                usersList: state.usersList.filter(user => user.id === action.payload)
+                usersList: state.usersList.filter(user => user.id !== action.payload)
             };
         default: state;
     }

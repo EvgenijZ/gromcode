@@ -8,8 +8,9 @@ export const add = (user) => {
     }
 }
 
-export const remove = () => {
+export const remove = (id) => {
     return {
         type: REMOVE,
+        payload: id
     }
 }
