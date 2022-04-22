@@ -1,16 +1,16 @@
-export const ADD = 'USER/ADD';
-export const REMOVE = 'USER/REMOVE';
+export const ADD_USER = 'ADD_USER';
+export const REMOVE_USER = 'REMOVE_USER';
 
-export const add = (user) => {
+export const addUser = (user) => {
     return {
-        type: ADD,
+        type: ADD_USER,
         payload: user
     }
 }
 
-export const remove = (id) => {
+export const deleteUser = (id) => {
     return {
-        type: REMOVE,
+        type: REMOVE_USER,
         payload: id
     }
 }

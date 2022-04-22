@@ -1,15 +1,15 @@
-import { ADD, REMOVE } from './users.actions.js';
+import { ADD_USER, REMOVE_USER } from './users.actions.js';
 
-const initialState = { usersList: [] };
+const initialState = { usersList: [] }
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case ADD:
+        case ADD_USER:
             return {
                 ...state,
                 usersList: state.usersList.concat(action.payload)
             }
-        case REMOVE:
+        case REMOVE_USER:
             return {
                 ...state,
                 usersList: state.usersList.filter(user => user.id !== action.payload)
