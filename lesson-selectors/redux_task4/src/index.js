@@ -18,6 +18,6 @@ store.subscribe(() => {
     const result = history.reduce((acc, item) => acc + item, 0);
     counterResult.textContent = `${history.map(item => {
         return Math.sign(item) !== -1 ? `+${item}` : item;
-    }).join(' ')} = ${result}`;
-    if (result === 0) counterResult.textContent = '';
+    }).join('')} = ${result}`;
+    if (!history.length) counterResult.textContent = '';
 });
