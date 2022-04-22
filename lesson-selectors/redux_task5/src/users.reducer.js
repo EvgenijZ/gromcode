@@ -7,12 +7,12 @@ export default (state = initialState, action) => {
         case ADD_USER:
             return {
                 ...state,
-                usersList: state.usersList.concat(action.payload)
+                usersList: [...state.usersList, action.payload]
             }
         case REMOVE_USER:
             return {
                 ...state,
-                usersList: state.usersList.filter(user => user.id !== action.payload)
+                usersList: state.usersList.filter(({ id }) => id !== action.payload)
             };
         default: state;
     }
