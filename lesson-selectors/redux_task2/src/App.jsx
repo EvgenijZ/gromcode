@@ -4,11 +4,13 @@ import { UserContext } from './user.js';
 
 const App = () => {
 	const [user, setUser] = useState({
-		name: 'Nikola Tesla',
-		avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+		userData: {
+			name: 'Nikola Tesla',
+			avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+		},
 	});
 	return (
-		<UserContext.Provider value={user}>
+		<UserContext.Provider value={user.userData}>
 			<div className='page'>
 				<Header />
 			</div>
