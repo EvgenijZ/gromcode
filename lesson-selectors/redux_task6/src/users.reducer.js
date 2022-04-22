@@ -28,7 +28,7 @@ export default function userReducer(state = initialState, action) {
             })
             return {
                 ...state,
-                newUserList
+                usersList: newUserList
             };
         default:
             return state;
