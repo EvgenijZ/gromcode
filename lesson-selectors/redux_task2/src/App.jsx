@@ -10,7 +10,7 @@ const App = () => {
 		},
 	});
 	return (
-		<UserContext.Provider value={user.userData}>
+		<UserContext.Provider value={user}>
 			<div className='page'>
 				<Header />
 			</div>
