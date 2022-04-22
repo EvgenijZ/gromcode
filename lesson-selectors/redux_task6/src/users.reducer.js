@@ -17,14 +17,18 @@ export default function userReducer(state = initialState, action) {
                 usersList: state.usersList.filter(({ id }) => id !== action.payload)
             };
         case UPDATE_USER:
-            return {
-                ...state,
-                usersList: state.usersList.map(user => {
-                    if (user.id === action.payload.userId) return {
+            const newUserList = state.usersList.map(user => {
+                if (user.id === action.payload.userId) {
+                    return {
                         ...user,
                         ...action.payload.userData
                     }
-                })
+                }
+                return user;
+            })
+            return {
+                ...state,
+                newUserList
             };
         default:
             return state;
