@@ -3,12 +3,14 @@ import Header from './Header.jsx';
 import { UserContext } from './user.js';
 
 const App = () => {
-	const [userData, setUserData] = useState({
-		name: 'Nikola Tesla',
-		avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+	const [user, setUser] = useState({
+		userData: {
+			name: 'Nikola Tesla',
+			avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+		},
 	});
 	return (
-		<UserContext.Provider value={userData}>
+		<UserContext.Provider value={user.userData}>
 			<div className='page'>
 				<Header />
 			</div>
