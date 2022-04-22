@@ -1,7 +1,10 @@
-import store from './store.js';
-import { addUser, deleteUser } from './users.actions.js';
+import store from './store';
+import { addUser, deleteUser } from './users.actions';
 
-const newUser = { id: 76, name: 'Sarah' };
-setTimeout(() => store.dispatch(addUser(newUser)), 3000);
-setTimeout(() => store.dispatch(deleteUser(76)), 5000);
-store.subscribe(() => console.log(store.getState()));
+store.dispatch(addUser({ id: 11, name: 'Olha' }));
+store.dispatch(addUser({ id: 22, name: 'Jack' }));
+store.dispatch(deleteUser(22));
+
+store.subscribe(() => {
+    console.log(store.getState());
+});
