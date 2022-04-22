@@ -10,5 +10,3 @@ store.dispatch(removeProduct(76));
 store.dispatch(setUser({ name: 'Jack' }));
 store.dispatch(setUser({ name: 'Jack12' }));
 store.dispatch(removeUser());
-
-console.log(store.getState());
