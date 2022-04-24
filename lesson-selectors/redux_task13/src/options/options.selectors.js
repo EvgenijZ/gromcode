@@ -1,0 +1,2 @@
+export const availableOptions = (state) => state.optionsList.filter(option => !state.selected.includes(option.id));
+export const selectedOptions = (state) => state.optionsList.filter(option => state.selected.includes(option.id));
