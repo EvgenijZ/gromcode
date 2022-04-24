@@ -12,7 +12,7 @@ const UsersList = ({ users, filteredUsers, filterText, queryUsers }) => {
 		<div>
 			<Filter
 				filterText={filterText}
-				count={users.length}
+				count={getUsers().length}
 				onChange={queryUsers}
 			/>
 			<ul className='users'>
