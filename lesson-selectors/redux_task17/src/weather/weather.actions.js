@@ -1,13 +1,13 @@
 import fetchWeather from './weather.gateway';
-export const GET_WEATHER_DATA = 'WEATHER/GET_DATA';
+export const FETCH_WEATHER_DATA = 'WEATHER/FETCH_DATA';
 
-export const getWeatherData = (data) => {
+export const fetchWeatherData = (data) => {
     return {
-        type: GET_WEATHER_DATA,
+        type: FETCH_WEATHER_DATA,
         payload: data
     }
 }
 
-export const fetchWeatherData = () => {
-    return (dispatch) => fetchWeather().then(data => dispatch(getWeatherData(data)));
+export const getWeatherData = () => {
+    return (dispatch) => fetchWeather().then(data => dispatch(fetchWeatherData(data)));
 }

@@ -1,4 +1,4 @@
-import { GET_WEATHER_DATA } from "./weather.actions";
+import { FETCH_WEATHER_DATA } from "./weather.actions";
 
 const initialState = {
     citiesList: []
@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case GET_WEATHER_DATA:
+        case FETCH_WEATHER_DATA:
             return {
                 ...state,
                 citiesList: action.payload
