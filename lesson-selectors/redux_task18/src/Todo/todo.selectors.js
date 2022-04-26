@@ -1,0 +1,1 @@
+export const getTodosSelector = (state) => state.todosList.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).sort((a, b) => a.done - b.done);
